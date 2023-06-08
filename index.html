@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>uPledge AI Impact</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #444;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      padding: 5px 10px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .division {
+      flex: 0 1 calc(50% - 40px);
+      padding: 100px;
+      background-color: #fff;
+      margin: 20px;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .division:hover {
+      transform: scale(1.1);
+      background-color: #f1f1f1;
+      cursor: pointer;
+    }
+
+    .container a {
+      text-decoration: none; /* Remove underline */
+      color: #333; /* Text Colours */
+    }
+
+    main {
+      padding: 50px;
+    }
+
+    footer {
+      background-color: #333;
+      padding: 10px;
+      color: #fff;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+      
+      .division {
+        flex-basis: 100%;
+      }
+    }
+
+    /* Blinker animation */
+    .blinking-cursor {
+      display: inline-block;
+      animation: blinker 1s step-end infinite;
+    }
+
+    @keyframes blinker {
+      50% {
+        visibility: hidden;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>uPledge AI Impact</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><b><a href="index.html">Home</a></b></li>
+      <!-- <li><a href="#">About</a></li> -->
+      <li><a href="pilot-1.html">Projects</a></li>
+      <!-- <li><a href="#">Contact</a></li> -->
+    </ul>
+  </nav>
+  <div class="container1">
+    <div class="container1-content">
+      <h2 id="container1-heading" style="text-align: center; padding: 20px;"></h2>
+      <p style="text-align: justify; margin-inline: 175px;">At uPledge, we are dedicated to empowering impact startups by showcasing their commitment to sustainable development and responsible business practices.
+        Our cutting-edge technology leverages intelligent language comprehension and mapping sequences to analyze your company's data 
+        and provide valuable insights on the areas where you are making the most impact, as well as highlighting areas that require improvement. 
+        With the help of our algorithm, our comprehensive ESG report offers a quick and comprehensive assessment of your alignment with the Sustainable Development Goals (SDGs) and the Global Reporting Initiative (GRI) standards. 
+        By aligning with both the SDGs and the GRI standards, your company can demonstrate its unwavering commitment to sustainability and accountability, fostering trust and engagement with stakeholders. 
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <a href="pilot-1.html" class="division">
+      <h3><center>Pilot Project 1</center></h3>
+      <p><center>Highlighting the eco-solutions of the Startups</center></p>
+    </a>
+    <div class="division">
+      <h3><center>Coming Soon</center></h3>
+      <p><i><center>Stay Tuned</center></i></p>
+    </div>
+    <div class="division">
+      <h3><center>Coming Soon</center></h3>
+      <p><i><center>Stay Tuned</center></i></p>
+    </div>
+    <div class="division">
+      <h3><center>Coming Soon</center></h3>
+      <p><i><center>Stay Tuned</center></i></p>
+    </div>
+  </div>
+  <footer>
+    &copy; Johan Huizingalaan 763 A, 1066VH Amsterdam
+    © 2023 uPledge - Impact Investment Made Simple. All rights reserved.
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var text = "Discover the Power of uPledge: Unleashing Sustainable Impact for Businesses 🌱";
+      var targetElement = document.querySelector(".container1-content h2");
+
+      function typeWriterEffect(text, element, delay) {
+        var i = 0;
+        var timer = setInterval(function() {
+          if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+          } else {
+            clearInterval(timer);
+            element.innerHTML += '<span class="blinking-cursor">|</span>'; // Add the blinking cursor element
+          }
+        }, delay);
+      }
+
+      typeWriterEffect(text, targetElement, 100);
+    });
+  </script>
+</body>
+</html>
